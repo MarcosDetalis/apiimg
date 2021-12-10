@@ -24,9 +24,9 @@ npm i
 
 ## Ejecutando las pruebas ⚙️
 
- ![alt text](https://raw.githubusercontent.com/MarcosDetalis/navidad/main/demo1.jpeg)
+ ![alt text](https://raw.githubusercontent.com/MarcosDetalis/apiimg/main/index.png)
  
- ![alt text](https://raw.githubusercontent.com/MarcosDetalis/navidad/main/demo2.jpeg)
+ ![alt text](https://raw.githubusercontent.com/MarcosDetalis/apiimg/main/json.png)
  
  _Si desea probar la web_
 
