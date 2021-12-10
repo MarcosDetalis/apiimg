@@ -1,4 +1,4 @@
-# Subir images
+# Apiimg
 _Secilla web para poder subir tus imagenes y poder consumirlas_
 
 ## Construido con 🛠️
