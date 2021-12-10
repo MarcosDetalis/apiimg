@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cssuploads</title>
+    <script src="js/fontAw.js"></script>
+    <link rel="stylesheet" href="css/main2.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Ingrese los datos</h1>
+        <form action="/subir" method="post" enctype="multipart/form-data">
+            <input type="text" name="autor" placeholder="Ingrese el autor" class="aut-til">
+
+            <input type="text" name="title" placeholder="Ingrese el titulo" class="aut-til">
+         
+      
+            <div class="wrapper">
+                <div class="image" onclick="btnActive()">
+                    <img src="" alt="" class="c">
+                </div>
+                <div class="content">
+                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <div class="text">No hay archivo cargado</div>
+                </div>
+                <div id="cancel-btn"><i class="fas fa-times"></i></div>
+                <div class="file-name">Archivo nombre</div>
+            </div>
+            <input id="default-btn" type="file" name="image" id="" hidden>
+            <button>Enviar</button>
+        </form>
+    </div>
+</body>
+<script>
+    const wrapper = document.querySelector(".wrapper");
+    const cancelbtn = document.querySelector("#cancel-btn");
+
+    const filename = document.querySelector(".file-name");
+    const defaultbtn = document.querySelector("#default-btn");
+    const custombtn = document.querySelector("#custom-btn");
+    const img = document.querySelector("img");
+    // let regExp = pattern -/[0-9a-zA-]
+
+    function btnActive() {
+        defaultbtn.click();
+    }
+    defaultbtn.addEventListener("change", function() {
+        const file = this.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const result = reader.result;
+                img.src = result;
+
+                img.classList.remove("c");
+                wrapper.classList.add("active");
+
+            }
+
+            cancelbtn.addEventListener("click", () => {
+                img.src = "";
+                img.classList.add("c");
+                wrapper.classList.remove("active");
+            })
+            reader.readAsDataURL(file)
+        }
+        if (this.value) {
+            let valueStore = this.value;
+            filename.textContent = valueStore;
+        }
+
+    });
+</script>
+
+</html>

@@ -1,0 +1,58 @@
+ 
+    
+    input,
+    select {
+        display: block;
+        block-size: 30px;
+        inline-size: 40vh;
+        border-radius: 10px;
+        margin: 7px;
+        transition: .7s;
+    }
+    
+    input,
+    placeholder {
+    
+        font-size: 20px;
+        font-family: monospace;
+        transition: .7s;
+    }
+    
+    button {
+        block-size: 30px;
+        inline-size: 18vh;
+        border-radius: 10px;
+        font-size: 20px;
+        transition: .7s;
+        font-family: monospace;
+        background-image: linear-gradient(to right, #5f5f5f 0%, #d3d3d3 50%, #575f5e 100%);
+    }
+    
+    .forml {
+        position: relative;
+        left: 40%;
+        right: 40%;
+        top: 30px;
+    }
+    
+    body {
+        background: linear-gradient(to right bottom, #c4c5c5, #5c4f3e);
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    /*responsive */
+    
+    @media screen and (max-width: 900px) {
+        .forml {
+            left: 1vh;
+            top: 30px;
+        }
+        .contenedor {
+            margin: 20px;
+        }
+        h1 {
+            text-align: left;
+        }
+    }
