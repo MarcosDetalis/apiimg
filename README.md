@@ -1,5 +1,5 @@
 # Apiimg
-_Secilla web para poder subir tus imagenes y poder consumirlas_
+_Sencilla web para poder subir tus imagenes y poder consumirlas_
 
 ## Construido con 🛠️
   [Node js](https://nodejs.org/es/) 
